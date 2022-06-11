@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+i {
+  font-style: normal;
+}
+.header .tabs ul {
+  display: flex;
+}
+.header .tabs ul li {
+  position: relative;
+}
+.header .tabs ul li {
+  margin-right: 10px;
+}
+.header .tabs ul li:hover {
+  color: #00AEEC;
+}
+.header .tabs ul li.actived::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #00AEEC;
+}
+.container {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+.container button {
+  width: 30px;
+  margin-left: 10px;
+}
+
+
+.comments .comments-item {
+  display: flex;
+  height: 80px;
+  border-bottom: 1px solid #ccc;
+}
+
+.comments .comments-item .avatar img {
+  width: 40px;
+  height: 40px;
+}
+
+.comments .comments-item .detail {
+  margin-left: 20px;
+}
+
+.comments .comments-item .bottom {
+  display: flex;
+  align-items: center;
+}
+
+.comments .comments-item .bottom .time {
+  color: gray;
+  margin-right: 10px;
+}
+
+.comments .comments-item .bottom .like {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  background: url(//s1.hdslb.com/bfs/seed/jinkela/commentpc/static/img/ic_like.350644e.svg) no-repeat;
+  background-size: cover;
+  margin-right: 10px;
+  cursor: pointer;
+  
+}
+
+.comments .comments-item .bottom .like.liked {
+  background: url(//s1.hdslb.com/bfs/seed/jinkela/commentpc/static/img/ic_like_hover.1e0789c.svg) no-repeat;
+  background-size: cover;
+}
+
+.comments .comments-item .bottom .like:hover {
+
+  background: url(//s1.hdslb.com/bfs/seed/jinkela/commentpc/static/img/ic_like_hover.1e0789c.svg) no-repeat;
+  background-size: cover;
+}
+
+
+.comments .comments-item .bottom .hate {
+  width: 16px;
+  height: 16px;
+  background: url(//s1.hdslb.com/bfs/seed/jinkela/commentpc/static/img/ic_hate.82d82d4.svg) no-repeat;
+  background-size: cover;
+  margin-right: 10px;
+  cursor: pointer;
+
+}
+
+.comments .comments-item .bottom .hate.hated {
+  background: url(//s1.hdslb.com/bfs/seed/jinkela/commentpc/static/img/ic_hate_hover.80cf343.svg) no-repeat;
+  background-size: cover;
+}
+
+.comments .comments-item .bottom .hate:hover {
+  background: url(//s1.hdslb.com/bfs/seed/jinkela/commentpc/static/img/ic_hate_hover.80cf343.svg) no-repeat;
+  background-size: cover;
+}
+
+.comments .comments-item .bottom .del {
+  color: red;
+  cursor: pointer;
+
+}
+
+
+
+
