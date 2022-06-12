@@ -11,5 +11,7 @@ export const delTodo = (id) => ({ type: 'del', id })
 
 export const checkAllTodo = (checked) => ({ type: 'checkAll', checked })
 
-export const clearCompletedTodo = () => ({ type: 'clearCompleted'})
+export const clearCompletedTodo = () => ({ type: 'clearCompleted' })
+
+export const changeFilterCond = (filter) => ({ type: 'changeFilter', filter})
 

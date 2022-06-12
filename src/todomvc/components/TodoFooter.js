@@ -1,20 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { clearCompletedTodo } from "../store/action";
+import { changeFilterCond, clearCompletedTodo } from "../store/action";
 import classNames from "classnames";
 const nav = [ { type: 'All'}, { type: 'Actived'}, { type: 'Completed'}];
 
 export default function TodoFooter (props) {
   const list = useSelector((state) => state.todo);
+  const currentFilter = useSelector(state => state.filter)
   const dispatch = useDispatch();
   const uncompletedCount = list.filter((v) => !v.checked).length;
-  const [curIdx, setCurIdx] = useState(0)
 
-  const chooseSort = (idx, type,e ) => {
-    e.preventDefault();
-    setCurIdx(idx)
-    props.changeShowList(type)
-  }
   return (
     <footer className="footer">
       <span className="todo-count">
@@ -24,7 +19,7 @@ export default function TodoFooter (props) {
         {nav.map((v, idx) => {
           return (
             <li key={v.type}>
-              <a onClick={ chooseSort.bind(this, idx, v.type) } className={ classNames({ 'selected': curIdx === idx})} href="#/">
+              <a onClick={ ()=> {dispatch(changeFilterCond(v.type))} } className={ classNames({ 'selected': currentFilter === v.type})} href="#/">
                 { v.type }
               </a>
             </li>

@@ -57,14 +57,17 @@ const list = JSON.parse(window.localStorage.getItem('data')) ?? [
   }
 }
 
-// /** 分类的tod */
-// function sortTodo (preState = list, action) {
-//   return preState
-// }
+/** 筛选模块 */
+function filter (preState = 'All', action) {
+  if (action.type === 'changeFilter') {
+    return action.filter
+  }
+  return preState
+}
 
 const rootReducer = combineReducers({
   todo,
-  // sortTodo
+  filter
 })
 
 export default rootReducer
